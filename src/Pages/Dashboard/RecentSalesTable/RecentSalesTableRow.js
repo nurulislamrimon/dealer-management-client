@@ -9,7 +9,7 @@ const RecentSalesTableRow = ({ orderId, customer, deliveryStatus, grandTotal, pa
             <td className='pb-1'>{grandTotal}</td>
             <td className='pb-1'>{paidAmount}</td>
             <td className='pb-1'>{dueAmount}</td>
-            <td className={`inline-block w-16 border rounded-md ${paymentStatus.toLowerCase() === "paid" ? "border-primary text-primary" : paymentStatus.toString().toLowerCase() === "portial" ? "border-info text-info" : "border-warning text-warning"}`}>{paymentStatus}</td>
+            <td className={`inline-block w-16 border rounded-md p-0 ${paymentStatus.toLowerCase() === "paid" ? "border-primary text-primary" : paymentStatus.toString().toLowerCase() === "portial" ? "border-info text-info" : "border-warning text-warning"}`}>{paymentStatus}</td>
         </tr>
     );
 };

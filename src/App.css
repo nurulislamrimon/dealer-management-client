@@ -2,6 +2,10 @@
     @apply pl-10 w-full flex items-center text-neutral py-1 my-3 font-medium
 }
 
+.active {
+    background-color: #50FFB8;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 5px;

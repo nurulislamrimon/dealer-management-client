@@ -5,7 +5,9 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import Dealers from "../Pages/Dealers/Dealers";
 import Finance from "../Pages/Finance/Finance";
 import Invoice from "../Pages/Invoice/Invoice";
+import BlankStock from "../Pages/Products/BlankStock/BlankStock";
 import Products from "../Pages/Products/Products";
+import StockAlert from "../Pages/Products/StockAlert/StockAlert";
 import Purchases from "../Pages/Purchases/Purchases";
 import Returned from "../Pages/Returned/Returned";
 import Sales from "../Pages/Sales/Sales";
@@ -18,7 +20,7 @@ export const router = createBrowserRouter([
         element: <Layout />,
         children: [
             {
-                path: "",
+                path: "/",
                 element: <Dashboard />
             },
             {
@@ -28,6 +30,14 @@ export const router = createBrowserRouter([
             {
                 path: "products",
                 element: < Products />
+            },
+            {
+                path: "stock-alert",
+                element: <StockAlert />
+            },
+            {
+                path: "blank-stock",
+                element: <BlankStock />
             },
             {
                 path: "customer",
