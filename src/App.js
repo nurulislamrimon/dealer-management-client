@@ -5,7 +5,7 @@ import { router } from './router/router';
 
 function App() {
   return (
-    <div className="App scroll-smooth scroll-bar">
+    <div className="App scroll-smooth scroll-bar bg-white">
       <RouterProvider router={router} />
     </div>
   );

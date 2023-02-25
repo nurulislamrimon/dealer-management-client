@@ -1,5 +1,5 @@
 .menus-button {
-    @apply pl-10 w-full flex items-center text-neutral py-1 my-3 font-semibold
+    @apply pl-10 w-full flex items-center text-neutral py-1 my-3 font-medium
 }
 
 /* width */

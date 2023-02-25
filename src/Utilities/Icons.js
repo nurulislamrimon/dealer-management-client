@@ -6,6 +6,9 @@ import { TbTruckReturn } from "react-icons/tb"
 import { FaWarehouse } from "react-icons/fa"
 import { HiOutlineCurrencyBangladeshi } from "react-icons/hi"
 import { FiUsers } from "react-icons/fi"
+import { IoMdArrowDropdown } from "react-icons/io"
+import { IoMdArrowDropup } from "react-icons/io"
+import { HiOutlineBellAlert } from 'react-icons/hi2';
 
 export const icons = {
     "AiFillCodeSandboxCircle": AiFillCodeSandboxCircle,
@@ -20,4 +23,7 @@ export const icons = {
     "MdOutlineAddBusiness": MdOutlineAddBusiness,
     "HiOutlineCurrencyBangladeshi": HiOutlineCurrencyBangladeshi,
     "FiUsers": FiUsers,
+    "IoMdArrowDropdown": IoMdArrowDropdown,
+    "IoMdArrowDropup": IoMdArrowDropup,
+    "HiOutlineBellAlert": HiOutlineBellAlert,
 }
