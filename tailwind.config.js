@@ -22,13 +22,15 @@ module.exports = {
           "secondary-content": "#F4E8FF",
 
           "accent": "#FA6384",
-          "accent-content": "#FFE2E6",
+          "accent-content": "#A3A3A3",
 
           "neutral": "#464545",
           "neutral-content": "#464545",
 
-          "base-100": "#FFFFFF",
-          "base-300": "#5D5C5C",
+          "base-focus": "#5A5F5D",
+          "base-100": "#E2E8F0",
+          "base-200": "#ffffff",
+          "base-300": "#3B3737",
           "base-content": "#000000",
 
           "info": "#BE82FE",

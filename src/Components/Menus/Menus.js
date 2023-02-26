@@ -9,7 +9,7 @@ const Menus = () => {
 
     return (
         <nav className='h-screen relative bg-white'>
-            <Link to='/' className={`flex items-center m-5`}>
+            <Link to='/' className={`flex items-center m-5 `}>
                 <div className='h-10 w-10 rounded-full'>
                     {/* <img src="" alt="" /> */}
                     <icons.AiFillCodeSandboxCircle className='h-10 w-10 text-primary' />

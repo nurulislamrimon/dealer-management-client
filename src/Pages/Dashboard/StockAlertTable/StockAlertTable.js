@@ -4,11 +4,11 @@ import StockAlertTableRow from './StockAlertTableRow';
 const StockAlertTable = () => {
     return (
         <div className='rounded-md bg-white mx-3 col-span-2 text-xs  max-h-[28vh] overflow-auto'>
-            <div className="overflow-x-auto">
-                <h4 className='text-md font-bold ml-7 my-1'>Stock Alert</h4>
-                <table className="w-full border-t">
+            <div className="relative">
+                <h4 className='text-md font-bold ml-7 my-1 '>Stock Alert</h4>
+                <table className="w-full">
                     {/* head */}
-                    <thead>
+                    <thead className='sticky top-0 bg-base-200 border-b'>
                         <tr>
                             <th>Code</th>
                             <th>Product</th>

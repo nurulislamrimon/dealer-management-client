@@ -6,8 +6,8 @@ const FinanceCard = ({ logo, type, amount, bgColor, logoBgColor }) => {
             <div className={`${logoBgColor} h-8 w-8 rounded-full flex items-center justify-center`}>
                 {logo}
             </div>
-            <h1 className='font-bold'>{type}</h1>
-            <span>৳{amount}</span>
+            <h1>{type}</h1>
+            <span className='font-bold'>৳{amount}</span>
         </div>
     );
 };

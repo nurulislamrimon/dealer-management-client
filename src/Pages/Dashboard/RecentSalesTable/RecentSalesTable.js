@@ -4,11 +4,11 @@ import RecentSalesTableRow from './RecentSalesTableRow';
 const RecentSalesTable = () => {
     return (
         <div className='rounded-md bg-white m-3 col-span-2 text-xs  max-h-[28vh] overflow-auto'>
-            <div className="overflow-x-auto">
-                <h4 className='text-md font-bold ml-8 my-1'>Recent Sales</h4>
-                <table className="w-full border-t">
+            <div className="relative">
+                <h4 className='text-md font-bold ml-7 my-1'>Recent Sales</h4>
+                <table className="w-full">
                     {/* head */}
-                    <thead>
+                    <thead className='sticky top-0 bg-base-200 border-b'>
                         <tr>
                             <th>OrderId</th>
                             <th>Customer</th>

@@ -2,6 +2,10 @@
     @apply pl-10 w-full flex items-center text-neutral py-1 my-3 font-medium
 }
 
+.menu-container {
+    @apply col-span-5
+}
+
 .active {
     background-color: #50FFB8;
 }
@@ -9,6 +13,7 @@
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 /* Track */
