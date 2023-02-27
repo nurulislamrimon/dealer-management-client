@@ -2,7 +2,7 @@ import React from 'react';
 import { icons } from '../../../Utilities/Icons';
 
 
-const ProductsTableRow = () => {
+const ProductsTableRow = ({ setModals }) => {
     return (
         <tr>
             <td className='py-2'>
@@ -26,9 +26,18 @@ const ProductsTableRow = () => {
                 </span>
             </td>
             <th>
-                <button className="btn btn-ghost btn-xs"><icons.AiOutlineEye className='text-lg' /></button>
-                <button className="btn btn-ghost btn-xs"><icons.TbEdit className='text-lg text-primary' /></button>
-                <button className="btn btn-ghost btn-xs"><icons.RiDeleteBin5Line className='text-lg text-error' /></button>
+
+                <label htmlFor="product-view-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenViewProductModal({ test: "test from view button" })}>
+                    <icons.AiOutlineEye className='text-lg' />
+                </label>
+
+                <label htmlFor="product-edit-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenEditProductModal({ test: "test from edit button" })}>
+                    <icons.TbEdit className='text-lg text-primary' />
+                </label>
+
+                <label htmlFor="product-delete-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenDeleteProductModal({ test: "test from edit button" })}>
+                    <icons.RiDeleteBin5Line className='text-lg text-error' />
+                </label>
             </th>
         </tr>
     );

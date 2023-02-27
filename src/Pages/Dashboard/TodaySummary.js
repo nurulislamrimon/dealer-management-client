@@ -8,7 +8,7 @@ const TodaySummary = () => {
         <div className="bg-white m-3 p-3 rounded-md overflow-auto h-[30vh]">
             <div className="flex justify-between items-center">
                 <h6 className='pb-3 font-semibold'>Today's Summary</h6>
-                <select name="date-filter" defaultValue="this-month" id="date-filter" className='border text-sm p-0 rounded-md'>
+                <select name="date-filter" id="date-filter" className='border text-sm p-0 rounded-md'>
                     <option value="this-month">This month</option>
                 </select>
             </div>

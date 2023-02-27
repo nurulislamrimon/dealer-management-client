@@ -9,7 +9,7 @@ import { FiUsers } from "react-icons/fi"
 import { IoMdArrowDropdown } from "react-icons/io"
 import { IoMdArrowDropup } from "react-icons/io"
 import { HiOutlineBellAlert } from 'react-icons/hi2';
-import { BsPlusSquareFill } from 'react-icons/bs';
+import { BsArrowLeft, BsPlusSquareFill } from 'react-icons/bs';
 
 export const icons = {
     "AiFillCodeSandboxCircle": AiFillCodeSandboxCircle,
@@ -32,5 +32,6 @@ export const icons = {
     "TbEdit": TbEdit,
     "RiDeleteBin5Line": RiDeleteBin5Line,
     "BsPlusSquareFill": BsPlusSquareFill,
+    "BsArrowLeft": BsArrowLeft,
 
 }

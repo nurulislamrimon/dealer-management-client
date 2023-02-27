@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductsTableRow from './ProductsTableRow';
 
-const ProductsTable = () => {
+const ProductsTable = ({ setModals }) => {
     return (
         <div className="h-[calc(100vh-130px)] relative overflow-auto">
             <table className="table table-zebra w-full text-center text-base-300">
@@ -19,21 +19,16 @@ const ProductsTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
-                    <ProductsTableRow />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
+                    <ProductsTableRow setModals={setModals} />
                 </tbody>
 
             </table>

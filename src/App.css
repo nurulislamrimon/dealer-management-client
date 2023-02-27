@@ -6,6 +6,10 @@
     @apply col-span-5
 }
 
+.modal-input {
+    @apply input input-bordered w-full max-w-xs h-7 my-0 text-sm
+}
+
 .active {
     background-color: #50FFB8;
 }
