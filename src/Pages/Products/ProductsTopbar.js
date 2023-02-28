@@ -9,7 +9,7 @@ const ProductsTopbar = () => {
                 <input type="text" placeholder='Search' className='bg-base-200 outline-none pl-2' />
             </div>
             <div>
-                <button className='btn btn-primary btn-sm text-white'><icons.BsPlusSquareFill className='text-base-focus text-lg mr-2' />New Product</button>
+                <label htmlFor='product-add-new-modal' className='btn btn-primary btn-sm text-white'><icons.BsPlusSquareFill className='text-base-focus text-lg mr-2' />New Product</label>
             </div>
         </div>
     );

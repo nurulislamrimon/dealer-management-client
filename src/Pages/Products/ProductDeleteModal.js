@@ -14,10 +14,10 @@ const ProductDeleteModal = ({ product }) => {
                         </label>
                         <h3 className='text-2xl font-semibold'>Do you want to delete?</h3>
                         <label htmlFor="product-delete-modal" className='btn btn-xs btn-primary'>
-                            <button>No</button>
+                            No
                         </label>
                         <label htmlFor="product-delete-modal" className='btn btn-xs btn-error text-base-200'>
-                            <button>Delete</button>
+                            Delete
                         </label>
                     </div>
                     <div className="flex items-center justify-between">
@@ -25,7 +25,7 @@ const ProductDeleteModal = ({ product }) => {
                             <img src="https://createbakemake.com/wp-content/uploads/2021/03/Condensed-Milk-Cookies-3.jpg" alt="" className='w-full' />
                         </div>
                         <div>
-                            <p> Product id: T94758</p>
+                            <p> Product id: #T94758</p>
                             <p> Name: Malai Biscuit</p>
                             <p> Dealer: Malai</p>
                             <p> Price: 45</p>

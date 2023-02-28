@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AddNewProductModal from './AddNewProductModal/AddNewProductModal';
 import ProductDeleteModal from './ProductDeleteModal';
 import ProductEditModal from './ProductEditModal/ProductEditModal';
 import ProductsTable from './ProductsTable/ProductsTable';
@@ -27,6 +28,8 @@ const Products = () => {
             </div>
 
             <ProductsTable setModals={{ setOpenViewProductModal: setOpenViewProductModal, setOpenEditProductModal: setOpenEditProductModal, setDeleteEditProductModal: setDeleteEditProductModal }} />
+
+            <AddNewProductModal />
 
             {openViewProductModal && <ProductViewModal product={openViewProductModal} />}
 
