@@ -151,7 +151,7 @@ const AddNewProductForm = () => {
             </div>
 
 
-            <button className='btn btn-primary btn-sm block text-base-200 mx-auto mt-2'>Submit Edited item</button>
+            <label htmlFor='product-add-new-modal' className='btn btn-sm btn-primary text-base-200 mt-3 block w-fit py-2 mx-auto'>Submit New Item</label>
         </form>
     );
 };

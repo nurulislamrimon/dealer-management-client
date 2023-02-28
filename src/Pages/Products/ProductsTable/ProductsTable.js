@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductsTableRow from './ProductsTableRow';
 
-const ProductsTable = ({ setModals }) => {
+const ProductsTable = ({ setModals, products }) => {
     return (
         <div className="h-[calc(100vh-130px)] relative overflow-auto">
             <table className="table table-zebra w-full text-center text-base-300">
