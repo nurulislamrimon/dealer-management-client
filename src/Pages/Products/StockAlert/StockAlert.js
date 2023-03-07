@@ -11,7 +11,7 @@ const StockAlert = () => {
     const [openEditProductModal, setOpenEditProductModal] = useState({});
     const [openDeleteProductModal, setDeleteEditProductModal] = useState({});
     return (
-        <div className='w-full px-7 bg-white'>
+        <div className='w-full px-5 bg-white'>
             <h2 className='text-2xl font-bold py-3'>Product Expire Alert</h2>
             <hr className='border-gray' />
 

@@ -21,7 +21,7 @@ const ProductsTableRow = ({ setModals }) => {
             <td className='py-2'>৳ 100</td>
             <td className='py-2'>৳ 150</td>
             <td className='py-2'>
-                <span className='bg-primary-light text-success p-2'>
+                <span className='text-white bg-black-light rounded-lg px-2 py-1'>
                     Malai
                 </span>
             </td>

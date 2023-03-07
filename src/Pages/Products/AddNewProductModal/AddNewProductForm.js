@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import uploadPlaceholder from "../../../Images/upload-placeholder.png"
+import ImageInput from '../../../Utilities/ImageInput';
 import NumberInputWithValidation from '../../../Utilities/NumberInputWithValidation';
+import OptionTypeInput from '../../../Utilities/OptionTypeInput';
+import TextInput from '../../../Utilities/TextInput';
 
 const AddNewProductForm = () => {
     const [url, setUrl] = useState(uploadPlaceholder);
@@ -22,110 +25,24 @@ const AddNewProductForm = () => {
                 <div>
                     <div className="grid grid-cols-2 gap-5">
 
-                        {/* name input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text ">Name</span>
-                            </label>
-                            <input {...register("name", { required: true })} className="modal-input" />
-                            {errors.name && <label>
-                                <span className="label-text-alt text-error ">This input is required</span>
-                            </label>}
-                        </div>
-                        {/* SKU input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">SKU</span>
-                            </label>
-                            <input {...register("sku", { required: true })} className="modal-input" />
-                            {(errors.sku && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div>
-                        {/* Category input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">Category</span>
-                            </label>
-                            <select {...register("category", { required: true })} className="modal-input" >
-                                <option >Biscuite</option>
-                                <option value="bread">Bread</option>
-                            </select>
-                            {(errors.category && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div>
-                        {/* Brand input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">Brand (Dealer)</span>
-                            </label>
-                            <select {...register("brand", { required: true })} className="modal-input" >
-                                <option value="malai">Malai</option>
-                                <option value="pran">Pran</option>
-                            </select>
-                            {(errors.brand && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div>
+                        <TextInput register={register} errors={errors} regName="name" name="Name"/>
 
-                        {/* Product Cost input */}
-                        {/* <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">Product Cost</span>
-                            </label>
-                            <input {...register("productCost", { required: true })} className="modal-input" />
-                            {(errors.productCost && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div> */}
+                        <TextInput register={register} errors={errors} regName="sku" name="SKU"/>
 
-<NumberInputWithValidation register={register} errors={errors} regName="productCost" name="Product Cost"/>
+                        <OptionTypeInput register={register} errors={errors} regName="category" name="Category" options={["Biscuite","Bread"]}/>
 
-                        {/* Selling Price input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">Selling Price</span>
-                            </label>
-                            <input {...register("sellingPrice", { required: true })} className="modal-input" />
-                            {(errors.sellingPrice && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div>
-                        {/* Stock Product input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">Stock Product</span>
-                            </label>
-                            <input {...register("stockProduct", { required: true })} className="modal-input" />
-                            {(errors.stockProduct && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div>
-                        {/* Stock Alert input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">Stock Alert</span>
-                            </label>
-                            <input {...register("stockAlert", { required: true })} className="modal-input" />
-                            {(errors.stockAlert && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div>
+                        <OptionTypeInput register={register} errors={errors} regName="brand" name="Brand (Dealer)" options={["Malai","Pran"]}/>
 
-                        {/* warehouse input */}
-                        <div className="form-control w-full max-w-xs">
-                            <label>
-                                <span className="label-text">Warehouse</span>
-                            </label>
-                            <select {...register("warehouse", { required: true })} className="modal-input" >
-                                <option value="house stock">House Stock</option>
-                                <option value="madina store">Madina Store</option>
-                            </select>
-                            {(errors.warehouse && <label>
-                                <span className="label-text-alt text-error">This input is required</span>
-                            </label>)}
-                        </div>
+                        <NumberInputWithValidation register={register} errors={errors} regName="productCost" name="Product Cost"/>
+
+                        <NumberInputWithValidation register={register} errors={errors} regName="sellingPrice" name="Selling Price"/>
+
+                        <NumberInputWithValidation register={register} errors={errors} regName="stockProduct" name="Stock Product"/>
+
+                        <NumberInputWithValidation register={register} errors={errors} regName="stockAlert" name="Stock Alert"/>
+
+                        <OptionTypeInput register={register} errors={errors} regName="warehouse" name="Warehouse" options={["House Stock","Madina Store"]}/>
+                       
 
                     </div>
                     {/* description input */}
@@ -139,23 +56,12 @@ const AddNewProductForm = () => {
                         </label>)}
                     </div>
                 </div>
-                {/* Photo input */}
-                <div className="form-control w-full max-w-xs p-10">
-                    <p className="label-text">Product Image</p>
-                    <div className="border border-dashed border-base-300 rounded-3xl w-fit h-fit">
-                        <label htmlFor="photo" className='w-44 h-44 block p-5 pb-0 '>
-                            <img className='w-full h-full object-cover' src={url} alt="" />
-                        </label>
-                        <input id='photo' {...register("photo", { required: true })} type="file" className="file-input file-input-ghost max-w-xs opacity-0 h-0 w-0" onChange={imgInp} />
-                        {(errors.photo && <label>
-                            <span className="label-text-alt text-error">This input is required</span>
-                        </label>)}
-                    </div>
-                </div>
+            <ImageInput register={register} errors={errors} regName="productPhoto" name="Product Photo"/>
+
             </div>
 
 
-            <label htmlFor='product-add-new-modal' className='btn btn-sm btn-primary mt-3 block w-fit py-2 mx-auto'><button>Submit New Item</button></label>
+            <button htmlFor='product-add-new-modal' className='btn btn-sm btn-primary mt-3 block w-fit py-2 mx-auto'>Submit New Item</button>
         </form>
     );
 };

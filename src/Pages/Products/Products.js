@@ -12,7 +12,7 @@ const Products = () => {
     const [openDeleteProductModal, setDeleteProductModal] = useState({});
 
     return (
-        <div className='w-full py-5 px-10 bg-white text-black'>
+        <div className='w-full p-5 bg-white text-black'>
             <ProductsTopbar />
             <div className="flex justify-between items-center my-2">
                 <h2 className='text-2xl font-semibold my-3'>All Products</h2>

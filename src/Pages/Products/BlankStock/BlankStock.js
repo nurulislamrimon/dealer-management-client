@@ -11,7 +11,7 @@ const BlankStock = () => {
     const [openEditProductModal, setOpenEditProductModal] = useState({});
     const [openDeleteProductModal, setDeleteEditProductModal] = useState({});
     return (
-        <div className='menu-container px-7 w-full bg-white'>
+        <div className='menu-container px-5 w-full bg-white'>
             <h2 className='text-2xl font-bold py-3 border-b border-gray'>Blank Stock</h2>
 
             <div className="flex justify-between my-5">
