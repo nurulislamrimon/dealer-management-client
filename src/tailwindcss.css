@@ -24,9 +24,12 @@
     }
 
     .modal-input {
-        @apply w-full input border border-maya-blue h-fit 
+        @apply w-full input border border-maya-blue h-fit backdrop-opacity-70 bg-transparent
     }
     .img-input{
         @apply file-input file-input-ghost max-w-xs opacity-0 h-0 w-0
+    }
+    .textarea-input{
+        @apply textarea text-sm border border-maya-blue w-full backdrop-opacity-70 bg-transparent
     }
 }

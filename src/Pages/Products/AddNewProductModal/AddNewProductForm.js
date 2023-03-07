@@ -43,7 +43,7 @@ const AddNewProductForm = () => {
                         <label>
                             <span className="label-text">Description</span>
                         </label>
-                        <textarea {...register("description", { required: true })} className="textarea text-sm border border-maya-blue w-full " ></textarea>
+                        <textarea {...register("description", { required: true })} className="textarea-input " ></textarea>
                         {(errors.description && <label>
                             <span className="label-text-alt text-error">This input is required</span>
                         </label>)}
