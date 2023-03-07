@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode:"class",
+  // darkMode: 'class',
   content: ["./src/**/*.{html,js}"],
   theme: {
     fontFamily: {
@@ -47,5 +47,7 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
-
+daisyui:{
+  themes:false
+}
 }
