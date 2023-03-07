@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 const MenuComponent = ({ path, icon, name }) => {
     return (
         <li>
-            <NavLink className={`menus-button hover:bg-primary-focus 
-                    ${({ isActive }) => isActive ? "bg-primary-focus" : ""}
-                        `} to={path}>
+            <NavLink className={
+                    ({ isActive }) => isActive ? "menu-button bg-primary-dark" : "menu-button "}
+                        to={path}>
                 {icon}
                 {name}
             </NavLink>

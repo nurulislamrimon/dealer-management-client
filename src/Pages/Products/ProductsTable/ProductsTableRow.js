@@ -21,13 +21,13 @@ const ProductsTableRow = ({ setModals }) => {
             <td className='py-2'>৳ 100</td>
             <td className='py-2'>৳ 150</td>
             <td className='py-2'>
-                <span className='bg-primary-content text-success p-2'>
+                <span className='bg-primary-light text-success p-2'>
                     Malai
                 </span>
             </td>
             <th>
 
-                <label htmlFor="product-view-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenViewProductModal({ test: "test from view button" })}>
+                <label htmlFor="product-view-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenViewProductModal({})}>
                     <icons.AiOutlineEye className='text-lg' />
                 </label>
 
@@ -35,7 +35,7 @@ const ProductsTableRow = ({ setModals }) => {
                     <icons.TbEdit className='text-lg text-primary' />
                 </label>
 
-                <label htmlFor="product-delete-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenDeleteProductModal({ test: "test from edit button" })}>
+                <label htmlFor="product-delete-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setDeleteProductModal({ test: "test from edit button" })}>
                     <icons.RiDeleteBin5Line className='text-lg text-error' />
                 </label>
             </th>

@@ -1,20 +1,20 @@
 import React from 'react';
-import RecentSalesTable from './RecentSalesTable/RecentSalesTable';
-import StockAlertTable from './StockAlertTable/StockAlertTable';
-import TodaySummary from './TodaySummary';
+import DashboardStockAlertTable from './DashboardStockAlertTable/DashboardStockAlertTable';
+import DashboardTodaySummary from './DashboardTodaySummary';
 import DashboardTopBar from './DashboardTopBar';
-import TopSellingProductsTable from "./TopSellingProducts/TopSellingProducts"
+import TopSellingProductsTable from "./DashboardTopSellingProducts/DashboardTopSellingProducts"
+import DashboardRecentSalesTable from './DashboardRecentSalesTable/DashboardRecentSalesTable';
 
 const Dashboard = () => {
     return (
-        <div className="menu-container" >
+        <div className="w-full" >
             <DashboardTopBar />
-            <TodaySummary />
+            <DashboardTodaySummary />
             <div className="grid grid-cols-3">
-                <StockAlertTable />
+                <DashboardStockAlertTable />
                 <TopSellingProductsTable />
             </div>
-            <RecentSalesTable />
+            <DashboardRecentSalesTable />
         </div>
     );
 };

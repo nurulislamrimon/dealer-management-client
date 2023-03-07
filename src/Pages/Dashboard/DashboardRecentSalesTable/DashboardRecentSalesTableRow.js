@@ -1,8 +1,8 @@
 import React from 'react';
 
-const RecentSalesTableRow = ({ orderId, customer, deliveryStatus, grandTotal, paidAmount, dueAmount, paymentStatus }) => {
+const DashboardRecentSalesTableRow = ({ orderId, customer, deliveryStatus, grandTotal, paidAmount, dueAmount, paymentStatus }) => {
     return (
-        <tr className='text-center text-gray-500'>
+        <tr className='text-center text-black-light hover:bg-black-light-bg'>
             <td className='pb-1'>{orderId}</td>
             <td className='pb-1'>{customer}</td>
             <td className="pb-1"><span className={`inline-block w-20 border rounded-md ${deliveryStatus.toLowerCase() === "completed" ? "border-primary text-primary" : deliveryStatus.toString().toLowerCase() === "pending" ? "border-info text-info" : "border-warning text-warning"}`}>{deliveryStatus}</span></td>
@@ -14,4 +14,4 @@ const RecentSalesTableRow = ({ orderId, customer, deliveryStatus, grandTotal, pa
     );
 };
 
-export default RecentSalesTableRow;
+export default DashboardRecentSalesTableRow;

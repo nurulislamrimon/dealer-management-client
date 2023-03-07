@@ -1,8 +1,8 @@
 import React from 'react';
 
-const StockAlertTableRow = ({ code, product, warehouse, quantity, alertQty }) => {
+const DashboardStockAlertTableRow = ({ code, product, warehouse, quantity, alertQty }) => {
     return (
-        <tr className='text-center text-gray-500'>
+        <tr className='text-center text-black-light hover:bg-black-light-bg'>
             <td className='pb-1'>{code}</td>
             <td className='pb-1'>{product}</td>
             <td className='pb-1'>{warehouse}</td>
@@ -13,4 +13,4 @@ const StockAlertTableRow = ({ code, product, warehouse, quantity, alertQty }) =>
     );
 };
 
-export default StockAlertTableRow;
+export default DashboardStockAlertTableRow;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { icons } from '../../../Utilities/Icons';
+import ModalCloseButton from '../../../Utilities/ModalCloseButton';
 import AddNewProductForm from './AddNewProductForm';
 
 const AddNewProductModal = () => {
@@ -11,7 +11,7 @@ const AddNewProductModal = () => {
             <div className="modal">
                 <div className="modal-box relative min-w-fit">
                     <div className="text-lg font-bold flex items-cente">
-                        <label className='btn btn-ghost btn-sm' htmlFor="product-add-new-modal" ><icons.BsArrowLeft className='text-2xl' /></label>
+                        <ModalCloseButton htmlFor="product-add-new-modal" />
                         <h2 className='ml-5'>Add New Product</h2>
                     </div>
 

@@ -5,48 +5,46 @@ module.exports = {
     fontFamily: {
       sans: ['inter', 'sans-serif'],
     },
-    extend: {},
+    variants: {
+      extend: {
+        fontSize: ["hover"],
+      }
+    },
+    extend: {
+
+      colors: {
+        primary: {
+          light: "#DCFCE7",
+          DEFAULT: "#00CB79",
+          dark: "#50FFB8",
+        },
+        "dying-rose": {
+          light: "#FFE2E6",
+          DEFAULT: "#FA6384",
+        },
+        "electric-orange": {
+          light: "#FFF4DE",
+          DEFAULT: "#FD9379",
+        },
+        "maya-blue": {
+          light: "#F4E8FF",
+          DEFAULT: "#BE82FE",
+        },
+        black: {
+          "light-bg": "#F4F5F7",
+          light: "#5D5C5C",
+          DEFAULT: "#000000",
+        },
+        gray: "#E7E8EB",
+        white: "#ffffff",
+        error:{ 
+          light:"#F87272",
+          DEFAULT:"#FC2727",
+
+      },
+      },
+    },
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    // theme: false
-    themes: [
-      {
-        mytheme: {
 
-          "primary": "#00CB79",
-          "primary-focus": "#50FFB8",
-          "primary-content": "#DCFCE7",
-
-          "secondary": "#BE82FE",
-          "secondary-content": "#F4E8FF",
-
-          "accent": "#FA6384",
-          "accent-content": "#A3A3A3",
-
-          "neutral": "#464545",
-          "neutral-content": "#464545",
-
-          "base-focus": "#5A5F5D",
-          "base-100": "#E2E8F0",
-          "base-200": "#ffffff",
-          "base-300": "#3B3737",
-          "base-content": "#000000",
-
-          "info": "#BE82FE",
-          "info-content": "#F4E8FF",
-
-          "success": "#00CB79",
-          "success-content": "#E6FAF2",
-
-          "warning": "#FD9379",
-          "warning-content": "#FFF4DE",
-
-          "error": "#FC2727",
-          "error-content": "#FD9379",
-
-        },
-      },
-    ],
-  }
 }

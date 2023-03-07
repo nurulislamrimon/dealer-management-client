@@ -1,5 +1,6 @@
 import React from 'react';
 import { icons } from '../../../Utilities/Icons';
+import ModalCloseButton from '../../../Utilities/ModalCloseButton';
 import EditForm from './EditForm';
 
 const ProductEditModal = ({ product }) => {
@@ -11,7 +12,9 @@ const ProductEditModal = ({ product }) => {
             <div className="modal">
                 <div className="modal-box relative min-w-fit">
                     <div className="text-lg font-bold flex items-cente">
-                        <label className='btn btn-ghost btn-sm' htmlFor="product-edit-modal" ><icons.BsArrowLeft className='text-2xl' /></label>
+
+                        <ModalCloseButton htmlFor="product-edit-modal" />
+
                         <h2 className='ml-5'>Edit product</h2>
                     </div>
 

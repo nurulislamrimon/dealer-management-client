@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import NumberInputWithValidation from '../../../Utilities/NumberInputWithValidation';
 
 const EditForm = () => {
     const [url, setUrl] = useState("");
@@ -66,8 +67,8 @@ const EditForm = () => {
                                 <span className="label-text-alt text-error">This input is required</span>
                             </label>)}
                         </div>
-
                         {/* Product Cost input */}
+
                         <div className="form-control w-full max-w-xs">
                             <label>
                                 <span className="label-text">Product Cost</span>
@@ -77,6 +78,8 @@ const EditForm = () => {
                                 <span className="label-text-alt text-error">This input is required</span>
                             </label>)}
                         </div>
+                        
+
                         {/* Selling Price input */}
                         <div className="form-control w-full max-w-xs">
                             <label>
@@ -151,7 +154,7 @@ const EditForm = () => {
             </div>
 
 
-            <label htmlFor='product-edit-modal' className='btn btn-sm btn-primary text-base-200 mt-3 block w-fit py-2 mx-auto'>Submit Edited item</label>
+            <label htmlFor='product-edit-modal' className='btn btn-sm btn-primary mt-3 block w-fit py-2 mx-auto'>Submit Edited item</label>
         </form>
     );
 };

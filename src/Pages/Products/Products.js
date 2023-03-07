@@ -9,25 +9,26 @@ import ProductViewModal from './ProductViewModal';
 const Products = () => {
     const [openViewProductModal, setOpenViewProductModal] = useState({});
     const [openEditProductModal, setOpenEditProductModal] = useState({});
-    const [openDeleteProductModal, setDeleteEditProductModal] = useState({});
+    const [openDeleteProductModal, setDeleteProductModal] = useState({});
+
     return (
-        <div className='menu-container py-5 px-10'>
+        <div className='w-full py-5 px-10 bg-white text-black'>
             <ProductsTopbar />
             <div className="flex justify-between items-center my-2">
-                <h2 className='text-2xl font-semibold my-3 text-base-300'>All Products</h2>
+                <h2 className='text-2xl font-semibold my-3'>All Products</h2>
                 <div>
-                    <select name="dealer" id="dealer" className='p-1 rounded-lg mr-3'>
+                    <select name="dealer" id="dealer" className='p-1 rounded-lg mr-3 bg-black-light-bg'>
                         <option value="" disabled>Dealer</option>
                         <option value="malai">Malai</option>
                     </select>
-                    <select name="category" id="category" className='p-1 rounded-lg'>
+                    <select name="category" id="category" className='p-1 rounded-lg bg-black-light-bg'>
                         <option value="" disabled>Category</option>
                         <option value="biscuit">Biscuit</option>
                     </select>
                 </div>
             </div>
 
-            <ProductsTable setModals={{ setOpenViewProductModal: setOpenViewProductModal, setOpenEditProductModal: setOpenEditProductModal, setDeleteEditProductModal: setDeleteEditProductModal }} />
+            <ProductsTable setModals={{ setOpenViewProductModal: setOpenViewProductModal, setOpenEditProductModal: setOpenEditProductModal, setDeleteProductModal: setDeleteProductModal }} />
 
             <AddNewProductModal />
 

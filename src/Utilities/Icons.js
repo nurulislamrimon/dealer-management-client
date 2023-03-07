@@ -1,4 +1,4 @@
-import { AiFillCodeSandboxCircle, AiOutlineEye, AiOutlineLineChart, AiOutlineReconciliation, AiOutlineSearch } from "react-icons/ai"
+import { AiFillCodeSandboxCircle, AiOutlineEye, AiOutlineLineChart, AiOutlinePlus, AiOutlineReconciliation, AiOutlineSearch } from "react-icons/ai"
 import { RiDashboardFill, RiDeleteBin5Line, RiShoppingBag3Line } from "react-icons/ri"
 import { MdOutlineAddBusiness, MdOutlineProductionQuantityLimits } from "react-icons/md"
 import { IoIosPeople } from "react-icons/io";
@@ -10,6 +10,7 @@ import { IoMdArrowDropdown } from "react-icons/io"
 import { IoMdArrowDropup } from "react-icons/io"
 import { HiOutlineBellAlert } from 'react-icons/hi2';
 import { BsArrowLeft, BsPlusSquareFill } from 'react-icons/bs';
+import { CiLocationOn } from "react-icons/ci"
 
 export const icons = {
     "AiFillCodeSandboxCircle": AiFillCodeSandboxCircle,
@@ -33,5 +34,7 @@ export const icons = {
     "RiDeleteBin5Line": RiDeleteBin5Line,
     "BsPlusSquareFill": BsPlusSquareFill,
     "BsArrowLeft": BsArrowLeft,
+    "CiLocationOn": CiLocationOn,
+    "AiOutlinePlus": AiOutlinePlus,
 
 }

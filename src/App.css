@@ -1,20 +1,10 @@
-.menus-button {
-    @apply pl-10 w-full flex items-center text-neutral py-1 my-3 font-medium
-}
-
-.menu-container {
-    @apply col-span-5
-}
-
-.modal-input {
-    @apply input input-bordered w-full max-w-xs h-7 my-0 text-sm
-}
-
-.active {
-    background-color: #50FFB8;
-}
-
+/* scroll bar customization============= */
 /* width */
+
+
+.menu-container::-webkit-scrollbar {
+    width: 0px;
+}
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;

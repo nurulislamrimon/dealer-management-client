@@ -1,11 +1,12 @@
 import './App.css';
+import './tailwindcss.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './router/router';
 
 
 function App() {
   return (
-    <div className="App scroll-smooth scroll-bar bg-white">
+    <div className="App scroll-smooth scroll-bar">
       <RouterProvider router={router} />
     </div>
   );

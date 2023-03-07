@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import uploadPlaceholder from "../../../Images/upload-placeholder.png"
+import NumberInputWithValidation from '../../../Utilities/NumberInputWithValidation';
 
 const AddNewProductForm = () => {
     const [url, setUrl] = useState(uploadPlaceholder);
@@ -78,6 +79,9 @@ const AddNewProductForm = () => {
                                 <span className="label-text-alt text-error">This input is required</span>
                             </label>)}
                         </div>
+
+<NumberInputWithValidation register={register} errors={errors}/>
+
                         {/* Selling Price input */}
                         <div className="form-control w-full max-w-xs">
                             <label>
@@ -129,7 +133,7 @@ const AddNewProductForm = () => {
                         <label>
                             <span className="label-text">Description</span>
                         </label>
-                        <textarea {...register("description", { required: true })} className="textarea text-sm border border-accent-content w-full" ></textarea>
+                        <textarea {...register("description", { required: true })} className="textarea text-sm border border-black-light w-full" ></textarea>
                         {(errors.description && <label>
                             <span className="label-text-alt text-error">This input is required</span>
                         </label>)}
@@ -151,7 +155,7 @@ const AddNewProductForm = () => {
             </div>
 
 
-            <label htmlFor='product-add-new-modal' className='btn btn-sm btn-primary text-base-200 mt-3 block w-fit py-2 mx-auto'>Submit New Item</label>
+            <label htmlFor='product-add-new-modal' className='btn btn-sm btn-primary mt-3 block w-fit py-2 mx-auto'><button>Submit New Item</button></label>
         </form>
     );
 };

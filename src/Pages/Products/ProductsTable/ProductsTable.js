@@ -1,10 +1,10 @@
 import React from 'react';
 import ProductsTableRow from './ProductsTableRow';
 
-const ProductsTable = ({ setModals, products }) => {
+const ProductsTable = ({ products, setModals }) => {
     return (
-        <div className="h-[calc(100vh-130px)] relative overflow-auto">
-            <table className="table table-zebra w-full text-center text-base-300">
+        <div className="h-[calc(100vh-140px)] relative overflow-auto">
+            <table className="table table-zebra w-full text-center">
                 {/* head */}
                 <thead className='sticky top-0 z-10'>
                     <tr>

@@ -8,7 +8,7 @@ const Menus = () => {
     const [dropdown, setDropdown] = useState(false);
 
     return (
-        <nav className='h-screen relative bg-white'>
+        <nav className='h-screen relative bg-white w-fit border-r border-black-light-bg'>
             <Link to='/' className={`flex items-center m-5 `}>
                 <div className='h-10 w-10 rounded-full'>
                     {/* <img src="" alt="" /> */}
@@ -16,28 +16,28 @@ const Menus = () => {
                 </div>
                 <span className='text-2xl text-primary'>BRANDX</span>
             </Link>
-            <ul className='h-[calc(100vh-100px)] overflow-auto pb-8'>
+            <ul className='h-[calc(100vh-80px)] overflow-auto menu-container pb-10'>
 
                 <MenuComponent name="Dashboard" path="/" icon={<icons.RiDashboardFill className='mr-2' />} />
                 <li>
-                    <NavLink className={`menus-button hover:bg-primary-focus 
-                    ${({ isActive }) => isActive ? "bg-primary-focus" : ""}
-                        `} to="/products" onClick={() => setDropdown(!dropdown)}>
+                    <NavLink className={
+                    ({ isActive }) => isActive ? "menu-button bg-primary-dark" : "menu-button "}
+                     to="/products" onClick={() => setDropdown(!dropdown)}>
                         <icons.MdOutlineProductionQuantityLimits className="mr-2" />Products{dropdown ? <icons.IoMdArrowDropup className='ml-5' /> : <icons.IoMdArrowDropdown className='ml-5' />}
                     </NavLink>
                 </li>
 
                 <div className={`${dropdown ? "block" : "hidden"}`}>
                     <li>
-                        <NavLink className='text-neutral pl-14 w-full inline-block hover:bg-primary-focus text-sm' to="/stock-alert">
+                        <NavLink className='sub-menu-button' to="/stock-alert">
                             Stock Alert
-                            <span className='text-xs border rounded-full h-3 w-3 px-1 border-error text-error relative left-7'>2</span>
+                            <span className='text-xs border rounded-full px-1 border-error text-error ml-5'>2</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-neutral pl-14 w-full inline-block hover:bg-primary-focus text-sm' to="/blank-stock">
+                        <NavLink className='sub-menu-button' to="/blank-stock">
                             Blank Stock
-                            <span className='text-xs border rounded-full h-3 w-3 px-1 border-primary text-primary relative left-7'>2</span>
+                            <span className='text-xs border rounded-full px-1 border-primary text-primary ml-5'>2</span>
                         </NavLink>
                     </li>
                 </div>
@@ -47,13 +47,12 @@ const Menus = () => {
                 <MenuComponent name="Sales" path="/sales" icon={<icons.AiOutlineLineChart className='mr-2' />} />
 
                 <li>
-                    <NavLink className={`menus-button hover:bg-primary-focus 
-                    ${({ isActive }) => isActive ? "bg-secondary" : ""}
-                        `} to="/invoice">
+                    <NavLink className={({ isActive }) => isActive ? "menu-button bg-primary-dark" : "menu-button"}
+                     to="/invoice">
 
                         <icons.AiOutlineReconciliation className='mr-2' /> Invoice
 
-                        <div><span className='text-xs border rounded-full h-3 w-3 px-1 border-primary text-primary relative left-10'>2</span></div>
+                        <div><span className='text-xs border rounded-full px-1 border-primary text-primary ml-5'>2</span></div>
                     </NavLink>
                 </li>
 
@@ -72,7 +71,7 @@ const Menus = () => {
 
             </ul>
             <div>
-                <button className='btn btn-sm btn-primary w-fit fixed bottom-5 text-white mx-8'>Create Invoice</button>
+                <button className='btn btn-sm btn-primary w-fit fixed bottom-5 mx-5'>Create Invoice</button>
             </div>
         </nav >
     );

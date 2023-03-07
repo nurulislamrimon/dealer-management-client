@@ -1,5 +1,6 @@
 import React from 'react';
 import { icons } from "../../Utilities/Icons"
+import ModalCloseButton from '../../Utilities/ModalCloseButton';
 
 const ProductDeleteModal = ({ product }) => {
 
@@ -7,19 +8,9 @@ const ProductDeleteModal = ({ product }) => {
         <div>
             <input type="checkbox" id="product-delete-modal" className="modal-toggle" />
             <div className="modal">
-                <div className="modal-box relative">
-                    <div className="flex items-center justify-between">
-                        <label htmlFor="product-delete-modal" className="btn btn-ghost btn-sm btn-circle">
-                            <icons.BsArrowLeft className='text-2xl' />
-                        </label>
-                        <h3 className='text-2xl font-semibold'>Do you want to delete?</h3>
-                        <label htmlFor="product-delete-modal" className='btn btn-xs btn-primary'>
-                            No
-                        </label>
-                        <label htmlFor="product-delete-modal" className='btn btn-xs btn-error text-base-200'>
-                            Delete
-                        </label>
-                    </div>
+                <div className="modal-box relative p-5">
+                    <ModalCloseButton htmlFor="product-delete-modal" />
+                    <h3 className='text-2xl font-semibold'>Do you want to delete?</h3>
                     <div className="flex items-center justify-between">
                         <div className='w-1/2'>
                             <img src="https://createbakemake.com/wp-content/uploads/2021/03/Condensed-Milk-Cookies-3.jpg" alt="" className='w-full' />
@@ -32,10 +23,16 @@ const ProductDeleteModal = ({ product }) => {
                             <p> Selling Price: 55</p>
                             <p> Stock item: 0</p>
                             <p> Stock Alert: 30</p>
-
                         </div>
                     </div>
-
+                    <div className="flex mt-5 ml-auto w-fit">
+                        <label htmlFor="product-delete-modal" className='btn btn-xs btn-primary'>
+                            No
+                        </label>
+                        <label htmlFor="product-delete-modal" className='btn btn-xs btn-error mx-5'>
+                            Delete
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
