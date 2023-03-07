@@ -2,7 +2,7 @@ import React from 'react';
 import profilePlaceholder from "../../../Images/profile-placeholder.jpg"
 import { icons } from "../../../Utilities/Icons"
 
-const CustomerTableRow = () => {
+const CustomerTableRow = ({due}) => {
     return (
         <tr className='odd:bg-black-light-bg px-3'>
             <td className='pl-3'>
@@ -13,7 +13,7 @@ const CustomerTableRow = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="text-xl">{"Madina Store"}</div>
+                        <div className="text-xl">{"Madina Store"}{due&&<span className='px-3 py-1 bg-electric-orange text-white ml-3 text-sm rounded-lg'>Due</span>}</div> 
                         <div className="text-sm flex items-center"><icons.CiLocationOn className='mr-1' />{"Chaprashirhat"}</div>
                     </div>
                 </div>

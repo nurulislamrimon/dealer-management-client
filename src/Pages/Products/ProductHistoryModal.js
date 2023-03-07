@@ -5,7 +5,7 @@ const ProductHistoryModal = () => {
         <div>
 
             <input type="checkbox" id="product-history-modal" className="modal-toggle" />
-            <div className="modal">
+            <div className="modal backdrop-blur-sm">
                 <div className="modal-box relative min-w-fit bg-white h-full overflow-auto">
                     <label htmlFor="product-history-modal" className="btn btn-sm text-white btn-circle absolute right-2 top-2">✕</label>
                     <h2 className='text-xl font-bold mb-10'>History</h2>

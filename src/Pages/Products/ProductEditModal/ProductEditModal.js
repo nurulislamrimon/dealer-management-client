@@ -9,7 +9,7 @@ const ProductEditModal = ({ product }) => {
     return (
         <div>
             <input type="checkbox" id="product-edit-modal" className="modal-toggle" />
-            <div className="modal">
+            <div className="modal backdrop-blur-sm">
                 <div className="modal-box relative min-w-fit">
                     <div className="text-lg font-bold flex items-cente">
 

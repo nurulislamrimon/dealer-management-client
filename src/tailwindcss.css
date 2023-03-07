@@ -24,6 +24,9 @@
     }
 
     .modal-input {
-        @apply input input-bordered w-full max-w-xs h-7 my-0 text-sm
+        @apply w-full input border border-maya-blue h-fit 
+    }
+    .img-input{
+        @apply file-input file-input-ghost max-w-xs opacity-0 h-0 w-0
     }
 }

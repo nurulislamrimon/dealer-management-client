@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
-import uploadPlaceholder from "../../../Images/upload-placeholder.png"
 import ImageInput from '../../../Utilities/ImageInput';
 import NumberInputWithValidation from '../../../Utilities/NumberInputWithValidation';
 import OptionTypeInput from '../../../Utilities/OptionTypeInput';
 import TextInput from '../../../Utilities/TextInput';
 
 const AddNewProductForm = () => {
-    const [url, setUrl] = useState(uploadPlaceholder);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (e) => {
         console.log(e);
-    }
-    const imgInp = evt => {
-        const url = URL.createObjectURL(evt.target.files[0]);
-        url && setUrl(url);
-
     }
 
     return (
@@ -50,12 +43,13 @@ const AddNewProductForm = () => {
                         <label>
                             <span className="label-text">Description</span>
                         </label>
-                        <textarea {...register("description", { required: true })} className="textarea text-sm border border-black-light w-full" ></textarea>
+                        <textarea {...register("description", { required: true })} className="textarea text-sm border border-maya-blue w-full " ></textarea>
                         {(errors.description && <label>
                             <span className="label-text-alt text-error">This input is required</span>
                         </label>)}
                     </div>
                 </div>
+
             <ImageInput register={register} errors={errors} regName="productPhoto" name="Product Photo"/>
 
             </div>

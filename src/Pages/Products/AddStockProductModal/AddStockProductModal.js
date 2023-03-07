@@ -5,7 +5,7 @@ const AddStockProductModal = ({product}) => {
     return (
         <div>
             <input type="checkbox" id="add-stock-product-modal" className="modal-toggle" />
-            <div className="modal">
+            <div className="modal backdrop-blur-sm">
                 <div className="modal-box relative min-w-fit m-5">
                         <label htmlFor="add-stock-product-modal" className="btn btn-sm text-white btn-circle absolute right-2 top-2">✕</label>
                         <div className='w-full flex items-center space-x-10 p-7 border-b border-gray'>

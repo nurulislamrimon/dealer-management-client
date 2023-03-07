@@ -11,7 +11,7 @@ const ProductViewModal = ({ product }) => {
 
 
             <input type="checkbox" id="product-view-modal" className="modal-toggle" />
-            <div className="modal">
+            <div className="modal backdrop-blur-sm">
                 <div className="modal-box relative min-w-fit bg-white">
                     <AddStockProductModal />
                     <ProductHistoryModal />

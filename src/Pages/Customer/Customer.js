@@ -1,11 +1,15 @@
 import React from 'react';
 import CustomerTable from './CustomerTable/CustomerTable';
 import { icons } from "../../Utilities/Icons"
+import AddNewCustomerModal from './AddNewCustomerModal';
 
 const Customer = () => {
     return (
         <div className='w-full px-7 bg-white'>
-            <h2 className='text-2xl font-bold py-5'>Product Expire Alert</h2>
+            <div className="flex items-center justify-between">
+            <h2 className='text-2xl font-bold py-5'>All Customers</h2>
+            <label htmlFor="add-new-customer-modal" className='btn btn-sm btn-primary'>Add New Customer</label>
+            </div>
             <hr className='border-black-light' />
 
             <div className="flex justify-between my-5">
@@ -15,17 +19,17 @@ const Customer = () => {
                 </div>
 
                 <div className='flex'>
-                    <select name="dealer" id="dealer" className='p-1 rounded-lg mr-3 bg-black-light-bg'>
-                        <option value="">Dealer</option>
-                        <option value="malai">Malai</option>
+                    <select name="top-sells" id="top-sells" className='p-1 rounded-lg mr-3 bg-black-light-bg'>
+                        <option value="">Top sells</option>
                     </select>
-                    <select name="sort" id="sort" className='p-1 rounded-lg bg-black-light-bg'>
-                        <option value="a-z">Lower to higher price</option>
-                        <option value="z-a">Higher to lower price</option>
+                    <select name="filter" id="filter" className='p-1 rounded-lg bg-black-light-bg'>
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
                     </select>
                 </div>
             </div>
             <CustomerTable />
+            <AddNewCustomerModal/>
         </div>
     );
 };

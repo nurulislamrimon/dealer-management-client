@@ -7,7 +7,7 @@ const ProductDeleteModal = ({ product }) => {
     return (
         <div>
             <input type="checkbox" id="product-delete-modal" className="modal-toggle" />
-            <div className="modal">
+            <div className="modal backdrop-blur-sm">
                 <div className="modal-box relative p-5">
                     <ModalCloseButton htmlFor="product-delete-modal" />
                     <h3 className='text-2xl font-semibold'>Do you want to delete?</h3>
