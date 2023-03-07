@@ -2,9 +2,9 @@ import React from 'react';
 
 const AddStockProductModalForm = () => {
     return (
-        <div>
+        <form >
             form
-        </div>
+        </form>
     );
 };
 

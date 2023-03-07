@@ -65,11 +65,9 @@ const ProductViewModal = ({ product }) => {
                         </div>
                         <label htmlFor='add-stock-product-modal'
                             className='flex btn btn-sm bg-black-light-bg text-black border-none
-                          w-fit ml-auto hover:text-white'
+                          w-fit ml-auto hover:text-white hover:bg-primary'
                         >
-
                             <icons.AiOutlinePlus /> Add Product Stock
-
                         </label>
                     </div>
 

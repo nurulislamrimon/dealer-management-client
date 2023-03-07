@@ -3,7 +3,7 @@ import DashboardStockAlertTableRow from './DashboardStockAlertTableRow';
 
 const DashboardStockAlertTable = () => {
     return (
-        <div className='rounded-md bg-white mx-3 col-span-2 text-xs  max-h-[28vh] overflow-auto'>
+        <div className='rounded-md bg-white mx-3 col-span-2 text-xs  h-full overflow-auto'>
             <div className="relative">
                 <h4 className='text-md font-bold ml-7 my-1 '>Stock Alert</h4>
                 <table className="w-full">

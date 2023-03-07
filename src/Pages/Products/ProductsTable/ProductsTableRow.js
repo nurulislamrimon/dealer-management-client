@@ -4,7 +4,7 @@ import { icons } from '../../../Utilities/Icons';
 
 const ProductsTableRow = ({ setModals }) => {
     return (
-        <tr>
+        <tr className='text-black-light even:bg-black-light-bg'>
             <td className='py-2'>
                 <div className="mask mask-squircle w-12 h-12 mx-auto">
                     <img src="https://www.littlesugarsnaps.com/wp-content/uploads/2022/03/Shrewsbury-biscuits-square-1025.jpg" alt="Avatar Tailwind CSS Component" />
@@ -30,7 +30,6 @@ const ProductsTableRow = ({ setModals }) => {
                 <label htmlFor="product-view-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenViewProductModal({})}>
                     <icons.AiOutlineEye className='text-lg' />
                 </label>
-
                 <label htmlFor="product-edit-modal" className="btn btn-ghost btn-xs" onClick={() => setModals.setOpenEditProductModal({ test: "test from edit button" })}>
                     <icons.TbEdit className='text-lg text-primary' />
                 </label>

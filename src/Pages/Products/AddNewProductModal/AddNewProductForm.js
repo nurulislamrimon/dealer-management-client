@@ -70,7 +70,7 @@ const AddNewProductForm = () => {
                         </div>
 
                         {/* Product Cost input */}
-                        <div className="form-control w-full max-w-xs">
+                        {/* <div className="form-control w-full max-w-xs">
                             <label>
                                 <span className="label-text">Product Cost</span>
                             </label>
@@ -78,9 +78,9 @@ const AddNewProductForm = () => {
                             {(errors.productCost && <label>
                                 <span className="label-text-alt text-error">This input is required</span>
                             </label>)}
-                        </div>
+                        </div> */}
 
-<NumberInputWithValidation register={register} errors={errors}/>
+<NumberInputWithValidation register={register} errors={errors} regName="productCost" name="Product Cost"/>
 
                         {/* Selling Price input */}
                         <div className="form-control w-full max-w-xs">

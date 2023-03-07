@@ -29,13 +29,15 @@ const Menus = () => {
 
                 <div className={`${dropdown ? "block" : "hidden"}`}>
                     <li>
-                        <NavLink className='sub-menu-button' to="/stock-alert">
+                        <NavLink className={
+                    ({ isActive }) => isActive ? "sub-menu-button bg-primary-dark" : "sub-menu-button"} to="/stock-alert">
                             Stock Alert
                             <span className='text-xs border rounded-full px-1 border-error text-error ml-5'>2</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className='sub-menu-button' to="/blank-stock">
+                        <NavLink className={
+                    ({ isActive }) => isActive ? "sub-menu-button bg-primary-dark" : "sub-menu-button"} to="/stock-alert" to="/blank-stock">
                             Blank Stock
                             <span className='text-xs border rounded-full px-1 border-primary text-primary ml-5'>2</span>
                         </NavLink>

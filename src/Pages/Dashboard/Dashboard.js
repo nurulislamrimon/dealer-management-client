@@ -7,10 +7,10 @@ import DashboardRecentSalesTable from './DashboardRecentSalesTable/DashboardRece
 
 const Dashboard = () => {
     return (
-        <div className="w-full" >
+        <div className="w-full h-screen" >
             <DashboardTopBar />
             <DashboardTodaySummary />
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-3 lg:h-[28%] 2xl:h-[33%]">
                 <DashboardStockAlertTable />
                 <TopSellingProductsTable />
             </div>

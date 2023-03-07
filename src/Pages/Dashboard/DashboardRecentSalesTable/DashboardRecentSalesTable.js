@@ -3,12 +3,12 @@ import DashboardRecentSalesTableRow from './DashboardRecentSalesTableRow';
 
 const DashboardRecentSalesTable = () => {
     return (
-        <div className='rounded-md bg-white m-3 col-span-2 text-xs max-h-[28vh] overflow-auto'>
+        <div className='rounded-md bg-white m-3 col-span-2 text-xs overflow-auto lg:h-[28%] 2xl:h-[33%]'>
             <div className="relative">
                 <h4 className='text-md font-bold ml-7 my-1'>Recent Sales</h4>
                 <table className="w-full">
                     {/* head */}
-                    <thead className='sticky top-0 bg-base-200 border-b border-gray'>
+                    <thead className='sticky top-0 bg-black-light-bg border-b border-gray'>
                         <tr>
                             <th>OrderId</th>
                             <th>Customer</th>
@@ -25,7 +25,7 @@ const DashboardRecentSalesTable = () => {
                         <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Completed"} grandTotal={20000} paidAmount={20000} dueAmount={0} paymentStatus={"Paid"} alertQty={30} />
                         <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Ordered"} grandTotal={20000} paidAmount={0} dueAmount={20000} paymentStatus={"Unpaid"} alertQty={30} />
                         <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Ordered"} grandTotal={20000} paidAmount={0} dueAmount={20000} paymentStatus={"Unpaid"} alertQty={30} />
-                        <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Ordered"} grandTotal={20000} paidAmount={0} dueAmount={20000} paymentStatus={"Unpaid"} alertQty={30} />
+                        <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Ordered"} grandTotal={20000} paidAmount={0} dueAmount={20000} paymentStatus={"paid"} alertQty={30} />
                         <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Ordered"} grandTotal={20000} paidAmount={0} dueAmount={20000} paymentStatus={"Unpaid"} alertQty={30} />
                         <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Ordered"} grandTotal={20000} paidAmount={0} dueAmount={20000} paymentStatus={"Unpaid"} alertQty={30} />
                         <DashboardRecentSalesTableRow orderId={12345} customer={'Rimon'} deliveryStatus={"Ordered"} grandTotal={20000} paidAmount={0} dueAmount={20000} paymentStatus={"Unpaid"} alertQty={30} />

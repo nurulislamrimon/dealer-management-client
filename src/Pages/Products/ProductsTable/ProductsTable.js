@@ -4,18 +4,18 @@ import ProductsTableRow from './ProductsTableRow';
 const ProductsTable = ({ products, setModals }) => {
     return (
         <div className="h-[calc(100vh-140px)] relative overflow-auto">
-            <table className="table table-zebra w-full text-center">
+            <table className="w-full text-center">
                 {/* head */}
-                <thead className='sticky top-0 z-10'>
+                <thead className='sticky top-0 z-10 bg-black-light-bg'>
                     <tr>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Warehouse</th>
-                        <th>Quantity</th>
-                        <th>Cost</th>
-                        <th>Selling Price</th>
-                        <th>Dealer</th>
-                        <th>Actions</th>
+                        <th className='py-3'>Image</th>
+                        <th className='py-3'>Name</th>
+                        <th className='py-3'>Warehouse</th>
+                        <th className='py-3'>Quantity</th>
+                        <th className='py-3'>Cost</th>
+                        <th className='py-3'>Selling Price</th>
+                        <th className='py-3'>Dealer</th>
+                        <th className='py-3'>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
