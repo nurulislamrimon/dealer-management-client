@@ -10,7 +10,7 @@ const AddNewProductForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const getFirstChars = useFirstTwoLettersFromInput();
     const randomNumber = useRandomNumberUsingDate(10);
-    const [sku, setSku] = useState("#");
+    const [sku, setSku] = useState("");
 
 
     const handleChange = (e) => {
@@ -32,7 +32,7 @@ const AddNewProductForm = () => {
 
                         <TextInput register={register} errors={errors} regName="name" name="Name" placeholder="Type Name" />
 
-                        <TextInput register={register} errors={errors} regName="sku" name="SKU" placeholder="Add Product code" value={sku} />
+                        <TextInput register={register} errors={errors} regName="sku" name="SKU" placeholder="SKU will generate autometically" value={sku} isDisable={true} />
 
                         <OptionTypeInput register={register} errors={errors} regName="category" name="Category" options={["Biscuite", "Bread"]} />
 

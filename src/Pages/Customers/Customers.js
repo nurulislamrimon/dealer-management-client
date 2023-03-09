@@ -1,14 +1,14 @@
 import React from 'react';
-import CustomerTable from './CustomerTable/CustomerTable';
 import { icons } from "../../Utilities/Icons"
 import AddNewCustomerModal from './AddNewCustomerModal';
+import CustomersTable from './CustomersTable/CustomersTable';
 
-const Customer = () => {
+const Customers = () => {
     return (
         <div className='w-full px-7 bg-white'>
             <div className="flex items-center justify-between">
-            <h2 className='text-2xl font-bold py-5'>All Customers</h2>
-            <label htmlFor="add-new-customer-modal" className='btn btn-sm btn-primary'>Add New Customer</label>
+                <h2 className='text-2xl font-bold py-5'>All Customers</h2>
+                <label htmlFor="add-new-customer-modal" className='btn btn-sm btn-primary'>Add New Customer</label>
             </div>
             <hr className='border-black-light' />
 
@@ -28,10 +28,10 @@ const Customer = () => {
                     </select>
                 </div>
             </div>
-            <CustomerTable />
-            <AddNewCustomerModal/>
+            <CustomersTable />
+            <AddNewCustomerModal />
         </div>
     );
 };
 
-export default Customer;
+export default Customers;

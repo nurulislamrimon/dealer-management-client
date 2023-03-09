@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import Customer from "../Pages/Customer/Customer";
+import CustomerDetails from "../Pages/Customers/CustomerDetails/CustomerDetails";
+import Customers from "../Pages/Customers/Customers";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Dealers from "../Pages/Dealers/Dealers";
 import Finance from "../Pages/Finance/Finance";
 import Invoice from "../Pages/Invoice/Invoice";
+import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage";
 import BlankStock from "../Pages/Products/BlankStock/BlankStock";
 import Products from "../Pages/Products/Products";
 import StockAlert from "../Pages/Products/StockAlert/StockAlert";
@@ -41,7 +43,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "customer",
-                element: < Customer />
+                element: < Customers />
+            },
+            {
+                path: "customer/:id",
+                element: < CustomerDetails />
             },
             {
                 path: "sales",
@@ -74,6 +80,10 @@ export const router = createBrowserRouter([
             {
                 path: "users",
                 element: < Users />
+            },
+            {
+                path: "*",
+                element: < NotFoundPage />
             },
 
         ]

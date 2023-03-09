@@ -21,8 +21,8 @@ const Menus = () => {
                 <MenuComponent name="Dashboard" path="/" icon={<icons.RiDashboardFill className='mr-2' />} />
                 <li>
                     <NavLink className={
-                    ({ isActive }) => isActive ? "menu-button bg-primary-dark" : "menu-button "}
-                     to="/products" onClick={() => setDropdown(!dropdown)}>
+                        ({ isActive }) => isActive ? "menu-button bg-primary-dark" : "menu-button "}
+                        to="/products" onClick={() => setDropdown(!dropdown)}>
                         <icons.MdOutlineProductionQuantityLimits className="mr-2" />Products{dropdown ? <icons.IoMdArrowDropup className='ml-5' /> : <icons.IoMdArrowDropdown className='ml-5' />}
                     </NavLink>
                 </li>
@@ -30,14 +30,14 @@ const Menus = () => {
                 <div className={`${dropdown ? "block" : "hidden"}`}>
                     <li>
                         <NavLink className={
-                    ({ isActive }) => isActive ? "sub-menu-button bg-primary-dark" : "sub-menu-button"} to="/stock-alert">
+                            ({ isActive }) => isActive ? "sub-menu-button bg-primary-dark" : "sub-menu-button"} to="/stock-alert">
                             Stock Alert
                             <span className='text-xs border rounded-full px-1 border-error text-error ml-5'>2</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink className={
-                    ({ isActive }) => isActive ? "sub-menu-button bg-primary-dark" : "sub-menu-button"} to="/stock-alert" to="/blank-stock">
+                            ({ isActive }) => isActive ? "sub-menu-button bg-primary-dark" : "sub-menu-button"} to="/stock-alert" to="/blank-stock">
                             Blank Stock
                             <span className='text-xs border rounded-full px-1 border-primary text-primary ml-5'>2</span>
                         </NavLink>
@@ -50,7 +50,7 @@ const Menus = () => {
 
                 <li>
                     <NavLink className={({ isActive }) => isActive ? "menu-button bg-primary-dark" : "menu-button"}
-                     to="/invoice">
+                        to="/invoice">
 
                         <icons.AiOutlineReconciliation className='mr-2' /> Invoice
 
