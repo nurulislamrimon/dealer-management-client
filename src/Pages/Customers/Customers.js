@@ -5,7 +5,7 @@ import CustomersTable from './CustomersTable/CustomersTable';
 
 const Customers = () => {
     return (
-        <div className='w-full px-7 bg-white'>
+        <div className='w-full h-full px-7 bg-white'>
             <div className="flex items-center justify-between">
                 <h2 className='text-2xl font-bold py-5'>All Customers</h2>
                 <label htmlFor="add-new-customer-modal" className='btn btn-sm btn-primary'>Add New Customer</label>
