@@ -32,4 +32,7 @@
     .textarea-input{
         @apply textarea text-sm border border-maya-blue w-full backdrop-opacity-70 bg-transparent
     }
+    .customer-info{
+        @apply flex justify-between text-sm font-medium mt-2
+    }
 }

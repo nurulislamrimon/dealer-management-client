@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import CustomerDetailsInfoSection from './CustomerDetailsInfoSection';
 import CustomerDetailsTable from './CustomerDetailsTable/CustomerDetailsTable';
 import CustomerSaleDueSection from './CustomerSaleDueSection';
+import {icons} from "../../../Utilities/Icons";
 
 const CustomerDetails = () => {
     const { id } = useParams();
@@ -17,10 +18,10 @@ const CustomerDetails = () => {
                 </h4>
                 <div className="flex space-x-2">
                     <button className='text-primary btn btn-sm bg-white border-none hover:btn-primary'>
-                        VIEW STATEMENT
+                       <icons.CgFileDocument className='text-primary text-lg mr-1'/> VIEW STATEMENT
                     </button>
                     <button className='text-primary btn btn-sm bg-white border-none hover:btn-primary'>
-                        EDIT CUSTOMER DETAILS
+                       <icons.AiOutlineEdit className='text-primary text-lg mr-1'/> EDIT CUSTOMER DETAILS
                     </button>
                 </div>
             </div>

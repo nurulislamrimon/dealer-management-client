@@ -11,6 +11,9 @@ import { IoMdArrowDropup } from "react-icons/io"
 import { HiOutlineBellAlert } from 'react-icons/hi2';
 import { BsArrowLeft, BsPlusSquareFill } from 'react-icons/bs';
 import { GoLocation } from "react-icons/go"
+import { IoCallOutline } from "react-icons/io5"
+import { CgFileDocument } from "react-icons/cg"
+import { AiOutlineEdit } from "react-icons/ai"
 
 export const icons = {
     "AiFillCodeSandboxCircle": AiFillCodeSandboxCircle,
@@ -36,5 +39,7 @@ export const icons = {
     "BsArrowLeft": BsArrowLeft,
     "GoLocation": GoLocation,
     "AiOutlinePlus": AiOutlinePlus,
-
+"IoCallOutline":IoCallOutline,
+"CgFileDocument":CgFileDocument,
+"AiOutlineEdit":AiOutlineEdit,
 }
