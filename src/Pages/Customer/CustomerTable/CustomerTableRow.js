@@ -14,7 +14,7 @@ const CustomerTableRow = ({due}) => {
                     </div>
                     <div>
                         <div className="text-xl">{"Madina Store"}{due&&<span className='px-3 py-1 bg-electric-orange text-white ml-3 text-sm rounded-lg'>Due</span>}</div> 
-                        <div className="text-sm flex items-center"><icons.CiLocationOn className='mr-1' />{"Chaprashirhat"}</div>
+                        <div className="text-sm flex items-center"><icons.GoLocation className='mr-1' />Chaprashirhat</div>
                     </div>
                 </div>
             </td>

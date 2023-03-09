@@ -1,41 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import ImageInput from '../../../Utilities/ImageInput';
 import NumberInputWithValidation from '../../../Utilities/NumberInputWithValidation';
 import OptionTypeInput from '../../../Utilities/OptionTypeInput';
 import TextInput from '../../../Utilities/TextInput';
+import { useFirstTwoLettersFromInput, useRandomNumberUsingDate } from '../../../Utilities/useRandomNumberUsingDate';
 
 const AddNewProductForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const getFirstChars = useFirstTwoLettersFromInput();
+    const randomNumber = useRandomNumberUsingDate(10);
+    const [sku, setSku] = useState("#");
+
+
+    const handleChange = (e) => {
+        if (e.target.name === "name") {
+            return setSku("#" + getFirstChars(e.target.value) + randomNumber);
+        } else { return }
+
+    }
 
     const onSubmit = (e) => {
         console.log(e);
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} onChange={handleChange}>
             <div className="flex items-center pl-5">
                 <div>
                     <div className="grid grid-cols-2 gap-5">
 
-                        <TextInput register={register} errors={errors} regName="name" name="Name"/>
+                        <TextInput register={register} errors={errors} regName="name" name="Name" placeholder="Type Name" />
 
-                        <TextInput register={register} errors={errors} regName="sku" name="SKU"/>
+                        <TextInput register={register} errors={errors} regName="sku" name="SKU" placeholder="Add Product code" value={sku} />
 
-                        <OptionTypeInput register={register} errors={errors} regName="category" name="Category" options={["Biscuite","Bread"]}/>
+                        <OptionTypeInput register={register} errors={errors} regName="category" name="Category" options={["Biscuite", "Bread"]} />
 
-                        <OptionTypeInput register={register} errors={errors} regName="brand" name="Brand (Dealer)" options={["Malai","Pran"]}/>
+                        <OptionTypeInput register={register} errors={errors} regName="brand" name="Brand (Dealer)" options={["Malai", "Pran"]} />
 
-                        <NumberInputWithValidation register={register} errors={errors} regName="productCost" name="Product Cost"/>
+                        <NumberInputWithValidation register={register} errors={errors} regName="productCost" name="Product Cost" placeholder="Add Product cost" />
 
-                        <NumberInputWithValidation register={register} errors={errors} regName="sellingPrice" name="Selling Price"/>
+                        <NumberInputWithValidation register={register} errors={errors} regName="sellingPrice" name="Selling Price" placeholder="Add Selling Price" />
 
-                        <NumberInputWithValidation register={register} errors={errors} regName="stockProduct" name="Stock Product"/>
+                        <NumberInputWithValidation register={register} errors={errors} regName="stockProduct" name="Stock Product" placeholder="Add Stock Product" />
 
-                        <NumberInputWithValidation register={register} errors={errors} regName="stockAlert" name="Stock Alert"/>
+                        <NumberInputWithValidation register={register} errors={errors} regName="stockAlert" name="Stock Alert" placeholder="Add Stock Alert" />
 
-                        <OptionTypeInput register={register} errors={errors} regName="warehouse" name="Warehouse" options={["House Stock","Madina Store"]}/>
-                       
+                        <OptionTypeInput register={register} errors={errors} regName="warehouse" name="Warehouse" options={["House Stock", "Madina Store"]} />
+
 
                     </div>
                     {/* description input */}
@@ -50,7 +62,7 @@ const AddNewProductForm = () => {
                     </div>
                 </div>
 
-            <ImageInput register={register} errors={errors} regName="productPhoto" name="Product Photo"/>
+                <ImageInput register={register} errors={errors} regName="productPhoto" name="Product Photo" />
 
             </div>
 

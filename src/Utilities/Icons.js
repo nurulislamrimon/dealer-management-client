@@ -10,7 +10,7 @@ import { IoMdArrowDropdown } from "react-icons/io"
 import { IoMdArrowDropup } from "react-icons/io"
 import { HiOutlineBellAlert } from 'react-icons/hi2';
 import { BsArrowLeft, BsPlusSquareFill } from 'react-icons/bs';
-import { CiLocationOn } from "react-icons/ci"
+import { GoLocation } from "react-icons/go"
 
 export const icons = {
     "AiFillCodeSandboxCircle": AiFillCodeSandboxCircle,
@@ -34,7 +34,7 @@ export const icons = {
     "RiDeleteBin5Line": RiDeleteBin5Line,
     "BsPlusSquareFill": BsPlusSquareFill,
     "BsArrowLeft": BsArrowLeft,
-    "CiLocationOn": CiLocationOn,
+    "GoLocation": GoLocation,
     "AiOutlinePlus": AiOutlinePlus,
 
 }

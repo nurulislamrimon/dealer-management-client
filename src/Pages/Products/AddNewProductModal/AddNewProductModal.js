@@ -9,8 +9,8 @@ const AddNewProductModal = () => {
         <div>
             <input type="checkbox" id="product-add-new-modal" className="modal-toggle" />
             <div className="modal backdrop-blur-sm">
-                <div className="modal-box relative min-w-fit bg-opacity-70">
-                    <div className="text-lg font-bold flex items-cente">
+                <div className="modal-box relative min-w-fit">
+                    <div className="text-lg font-bold flex items-center">
                         <ModalCloseButton htmlFor="product-add-new-modal" />
                         <h2 className='ml-5'>Add New Product</h2>
                     </div>
