@@ -4,7 +4,6 @@ import profilePlaceholder from "../../../Images/profile-placeholder.jpg"
 import { icons } from "../../../Utilities/Icons"
 
 const CustomersTableRow = ({ customer }) => {
-    console.log(customer.id);
 
     return (
         <Link to={`${customer?.id}`} className='odd:bg-black-light-bg px-3 grid grid-cols-5 gap-5 items-center cursor-pointer whitespace-nowrap'>
