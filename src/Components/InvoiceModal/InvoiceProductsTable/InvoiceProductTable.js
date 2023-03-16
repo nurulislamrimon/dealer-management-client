@@ -3,6 +3,8 @@ import InvoiceProductTableRow from './InvoiceProductTableRow';
 
 const InvoiceProductTable = ({ invoice }) => {
     const [totalCompanies, setTotalCompanies] = useState([]);
+    // console.log(invoice);
+
 
     useEffect(() => {
         invoice?.orderItems?.forEach(orderItem => {
@@ -15,12 +17,9 @@ const InvoiceProductTable = ({ invoice }) => {
         });
     }, []);
 
-    // for (const company of totalCompanies) {
-    //     console.log(company);
-    // }
     return (
-        <div className='border border-gray rounded-md p-3 w-full text-sm  whitespace-nowrap'>
-            <div className='sticky top-0 z-10 bg-white border-b border-gray w-full font-bold grid grid-cols-5'>
+        <div className='border border-gray rounded-md p-3 pt-0 w-full text-sm whitespace-nowrap relative h-[calc(100vh-350px)] overflow-auto'>
+            <div className='sticky top-0 z-10 bg-white border-b border-gray w-full font-bold grid grid-cols-5 py-1'>
                 <h3>ID</h3>
                 <h3>Product Name</h3>
                 <h3>Qty</h3>
@@ -28,15 +27,13 @@ const InvoiceProductTable = ({ invoice }) => {
                 <h3>Total</h3>
             </div>
             <div className='w-full'>
-                {totalCompanies.forEach(company => {
-                    const orderItems = invoice?.orderItems?.filter(orderItem => orderItem?.company === company);
-                    // orderItems?.map(orderItem => <InvoiceProductTableRow key={orderItem?.productId} orderItem={orderItem} />)
-                    console.log(orderItems);
-
+                {totalCompanies?.map(company => {
+                    return <>
+                        <p className='text-left ml-5 pt-2 capitalize font-bold'>{company}</p>
+                        {invoice?.orderItems?.filter(orderItem => orderItem?.company === company).map(orderItem => <InvoiceProductTableRow key={orderItem?.id} orderItem={orderItem} />
+                        )}
+                    </>
                 })}
-
-                {/* <p className='text-left ml-5 pt-2 capitalize'>{ }</p>
-                {invoice?.orderItems?.map(orderItem => <InvoiceProductTableRow key={orderItem?.id} orderItem={orderItem} />)} */}
             </div>
         </div>
     );

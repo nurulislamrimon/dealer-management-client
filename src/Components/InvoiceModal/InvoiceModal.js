@@ -15,7 +15,9 @@ const InvoiceModal = ({ order }) => {
             { productId: "PID2938", productName: "Honey Combo", company: "pran", quantity: 35, price: 40, total: 1400 },
             { productId: "PID2938", productName: "Honey Combo", company: "pran", quantity: 35, price: 40, total: 1400 },
             { productId: "PID2938", productName: "Malai Biscute", company: "malai", quantity: 35, price: 40, total: 1400 },
-            { productId: "PID2938", productName: "Malai Biscute", company: "toto", quantity: 35, price: 40, total: 1400 },
+            { productId: "PID2938", productName: "Toto Biscute", company: "toto", quantity: 35, price: 40, total: 1400 },
+            { productId: "PID2938", productName: "Toto Biscute", company: "toto", quantity: 35, price: 40, total: 1400 },
+            { productId: "PID2938", productName: "Toto Biscute", company: "toto", quantity: 35, price: 40, total: 1400 },
         ]
     }
 
@@ -23,7 +25,7 @@ const InvoiceModal = ({ order }) => {
         <div>
             <input type="checkbox" id="invoice-modal" className="modal-toggle" />
             <div className="modal backdrop-blur-sm">
-                <div className="modal-box relative min-w-fit bg-white m-5">
+                <div className="modal-box relative min-w-fit bg-white p-5">
                     <ModalCloseButton htmlFor="invoice-modal" />
                     <div className="flex">
                         <div className=''>

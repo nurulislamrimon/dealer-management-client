@@ -5,6 +5,7 @@
 .menu-container::-webkit-scrollbar {
     width: 0px;
 }
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
