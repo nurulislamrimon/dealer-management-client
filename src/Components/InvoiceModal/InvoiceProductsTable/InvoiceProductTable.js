@@ -14,7 +14,7 @@ const InvoiceProductTable = ({ invoice }) => {
             }
             setTotalCompanies([...totalCompanies, orderItem?.company]);
         });
-    }, [invoice]);
+    }, [invoice, totalCompanies]);
     console.log(invoice);
 
     return (
