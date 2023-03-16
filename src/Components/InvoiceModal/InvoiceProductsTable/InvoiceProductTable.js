@@ -3,7 +3,6 @@ import InvoiceProductTableRow from './InvoiceProductTableRow';
 
 const InvoiceProductTable = ({ invoice }) => {
     const [totalCompanies, setTotalCompanies] = useState([]);
-    // console.log(invoice);
 
 
     useEffect(() => {
@@ -15,7 +14,8 @@ const InvoiceProductTable = ({ invoice }) => {
             }
             setTotalCompanies([...totalCompanies, orderItem?.company]);
         });
-    }, []);
+    }, [invoice]);
+    console.log(invoice);
 
     return (
         <div className='border border-gray rounded-md p-3 pt-0 w-full text-sm whitespace-nowrap relative h-[calc(100vh-350px)] overflow-auto'>
@@ -30,7 +30,7 @@ const InvoiceProductTable = ({ invoice }) => {
                 {totalCompanies?.map(company => {
                     return <>
                         <p className='text-left ml-5 pt-2 capitalize font-bold'>{company}</p>
-                        {invoice?.orderItems?.filter(orderItem => orderItem?.company === company).map(orderItem => <InvoiceProductTableRow key={orderItem?.id} orderItem={orderItem} />
+                        {invoice?.orderItems?.filter(orderItem => orderItem?.company === company).map((orderItem) => <InvoiceProductTableRow key={orderItem?._id} orderItem={orderItem} />
                         )}
                     </>
                 })}

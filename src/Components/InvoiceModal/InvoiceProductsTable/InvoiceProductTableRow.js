@@ -1,8 +1,6 @@
 import React from 'react';
 
 const InvoiceProductTableRow = ({ orderItem }) => {
-    console.log(orderItem);
-
     return (
         <div className="border-b last:border-none border-gray grid grid-cols-5 text-xs text-black-light py-2">
             <p>#{orderItem?.productId}</p>
